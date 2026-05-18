@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="__bl_biped">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="7.4194E-05 0.048506 0.052268"
+        rpy="0 0 0" />
+      <mass
+        value="0.15295" />
+      <inertia
+        ixx="6.4373E-05"
+        ixy="-3.5521E-08"
+        ixz="3.4441E-07"
+        iyy="0.00014322"
+        iyz="-3.3976E-06"
+        izz="0.0001144" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="hip_aa_left_side_bl_biped">
+    <inertial>
+      <origin
+        xyz="-0.0017924 0.028387 -0.021631"
+        rpy="0 0 0" />
+      <mass
+        value="0.093503" />
+      <inertia
+        ixx="6.6139E-05"
+        ixy="-4.3362E-07"
+        ixz="9.8289E-07"
+        iyy="4.2159E-05"
+        iyz="1.0505E-05"
+        izz="3.0749E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/hip_aa_left_side_bl_biped.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/hip_aa_left_side_bl_biped.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip_aa_left_side_bl_biped_joint"
+    type="fixed">
+    <origin
+      xyz="-0.066 -0.1182 0"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="hip_aa_left_side_bl_biped" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="hip_fe_left_side_bl_biped">
+    <inertial>
+      <origin
+        xyz="-0.00264656198378056 -0.0117373327096065 0.0449336453716666"
+        rpy="0 0 0" />
+      <mass
+        value="0.0875377233211831" />
+      <inertia
+        ixx="6.82008834854275E-05"
+        ixy="-2.03003326659631E-07"
+        ixz="-2.45175493755949E-07"
+        iyy="4.5069453666998E-05"
+        iyz="-9.45093477969188E-06"
+        izz="2.91118242506948E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/hip_fe_left_side_bl_biped.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/hip_fe_left_side_bl_biped.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip_fe_left_side_bl_biped_joint"
+    type="continuous">
+    <origin
+      xyz="0.01 0 0"
+      rpy="-1.5708 -0.12129 -1.5708" />
+    <parent
+      link="hip_aa_left_side_bl_biped" />
+    <child
+      link="hip_fe_left_side_bl_biped" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="upper_leg_left">
+    <inertial>
+      <origin
+        xyz="0.0337049648914777 -2.07744355823769E-05 -0.109703593119716"
+        rpy="0 0 0" />
+      <mass
+        value="0.10377648641822" />
+      <inertia
+        ixx="0.000268105400038996"
+        ixy="-1.13514210027242E-08"
+        ixz="1.27896688803571E-05"
+        iyy="0.000261762248291606"
+        iyz="6.97692640896009E-08"
+        izz="1.68226262641879E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/upper_leg_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/upper_leg_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="upper_leg_left_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.04009 0.02445"
+      rpy="-0.92879 0 0" />
+    <parent
+      link="hip_fe_left_side_bl_biped" />
+    <child
+      link="upper_leg_left" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="lower_leg_left">
+    <inertial>
+      <origin
+        xyz="-0.0385220333250463 -2.05346427539776E-06 -0.0881749362172527"
+        rpy="0 0 0" />
+      <mass
+        value="0.053970406394337" />
+      <inertia
+        ixx="0.000210304316971374"
+        ixy="-2.90237032213267E-11"
+        ixz="-3.23159186131294E-06"
+        iyy="0.000209791725136052"
+        iyz="-7.12590129571036E-11"
+        izz="3.06150796682135E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/lower_leg_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/lower_leg_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lower_leg_left_joint"
+    type="continuous">
+    <origin
+      xyz="0.01997 0 -0.2"
+      rpy="1.1856 0 -3.1416" />
+    <parent
+      link="upper_leg_left" />
+    <child
+      link="lower_leg_left" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="foot_left">
+    <inertial>
+      <origin
+        xyz="5.99032361769947E-08 -0.00700427543915016 1.85583393930155E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0165935434374477" />
+      <inertia
+        ixx="8.21666243950823E-06"
+        ixy="3.57318266999016E-12"
+        ixz="2.36883054385825E-11"
+        iyy="8.10382689201121E-06"
+        iyz="-3.08746634705909E-12"
+        izz="5.50701454433249E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/foot_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/foot_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_left_joint"
+    type="fixed">
+    <origin
+      xyz="-0.03943 0 -0.2"
+      rpy="1.0472 0 0" />
+    <parent
+      link="lower_leg_left" />
+    <child
+      link="foot_left" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="hip_aa_right_side_bl_biped">
+    <inertial>
+      <origin
+        xyz="-0.0017935 -0.028388 -0.021631"
+        rpy="0 0 0" />
+      <mass
+        value="0.093502" />
+      <inertia
+        ixx="6.6138E-05"
+        ixy="4.3374E-07"
+        ixz="9.8305E-07"
+        iyy="4.216E-05"
+        iyz="-1.0503E-05"
+        izz="3.0749E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/hip_aa_right_side_bl_biped.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/hip_aa_right_side_bl_biped.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip_aa_right_side_bl_biped"
+    type="fixed">
+    <origin
+      xyz="0.066 -0.1182 0"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="hip_aa_right_side_bl_biped" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="hip_fe_right_side_bl_biped">
+    <inertial>
+      <origin
+        xyz="-0.00264759104456501 -0.0117375436090387 -0.0449332991893937"
+        rpy="0 0 0" />
+      <mass
+        value="0.0875393673311257" />
+      <inertia
+        ixx="6.82030069011361E-05"
+        ixy="-2.02901065429794E-07"
+        ixz="2.45045267676802E-07"
+        iyy="4.50813094160471E-05"
+        iyz="9.44989188438618E-06"
+        izz="2.9123047290005E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/hip_fe_right_side_bl_biped.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/hip_fe_right_side_bl_biped.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip_fe_right_side_bl_biped_joint"
+    type="continuous">
+    <origin
+      xyz="0.01 0 0"
+      rpy="-1.5708 -0.088416 1.5708" />
+    <parent
+      link="hip_aa_right_side_bl_biped" />
+    <child
+      link="hip_fe_right_side_bl_biped" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="upper_leg_right">
+    <inertial>
+      <origin
+        xyz="0.033705 -2.0751E-05 -0.1097"
+        rpy="0 0 0" />
+      <mass
+        value="0.10378" />
+      <inertia
+        ixx="0.00026811"
+        ixy="-1.1395E-08"
+        ixz="1.2791E-05"
+        iyy="0.00026175"
+        iyz="6.9379E-08"
+        izz="1.6808E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/upper_leg_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/upper_leg_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="upper_leg_right_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.04009 -0.02445"
+      rpy="-2.2544 0 0" />
+    <parent
+      link="hip_fe_right_side_bl_biped" />
+    <child
+      link="upper_leg_right" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="lower_leg_right">
+    <inertial>
+      <origin
+        xyz="-0.013866 -2.0394E-06 -0.088175"
+        rpy="0 0 0" />
+      <mass
+        value="0.05397" />
+      <inertia
+        ixx="0.0002103"
+        ixy="-3.0611E-11"
+        ixz="-3.2316E-06"
+        iyy="0.00020979"
+        iyz="-7.5916E-11"
+        izz="3.0615E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/lower_leg_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/lower_leg_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lower_leg_right_joint"
+    type="continuous">
+    <origin
+      xyz="0.044626 0 -0.2"
+      rpy="-1.2419 0 3.1416" />
+    <parent
+      link="upper_leg_right" />
+    <child
+      link="lower_leg_right" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="foot_right">
+    <inertial>
+      <origin
+        xyz="7.0722E-08 -0.0070043 -4.6886E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.016594" />
+      <inertia
+        ixx="8.2167E-06"
+        ixy="2.3354E-12"
+        ixz="2.0099E-11"
+        iyy="8.1038E-06"
+        iyz="1.9059E-12"
+        izz="5.507E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/foot_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://__bl_biped/meshes/foot_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_right_joint"
+    type="fixed">
+    <origin
+      xyz="-0.014774 0 -0.2"
+      rpy="1.0472 0 -3.1416" />
+    <parent
+      link="lower_leg_right" />
+    <child
+      link="foot_right" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
