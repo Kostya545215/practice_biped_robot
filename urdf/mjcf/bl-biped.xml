@@ -1,0 +1,132 @@
+<mujoco model="__bl_biped">
+  <default>
+    <default class="robot">
+      <default class="visual">
+        <geom contype="1" conaffinity="0" group="2" />
+      </default>
+      <default class="collision">
+        <geom contype="1" conaffinity="1" group="3" />
+      </default>
+    </default>
+    <default class="floor">
+      <geom type="plane" size="0 0 0.05" material="groundplane" />
+    </default>
+  </default>
+
+  <compiler angle="radian" meshdir="." balanceinertia="true" />
+
+  <visual>
+    <global offwidth="3840" offheight="2160" />
+  </visual>
+
+  <worldbody>
+    <body name="base_link" childclass="robot" pos="0 0 0.3923">
+      <geom name="base_link_collision" type="mesh" mesh="base_link_collision_base_link" class="collision" />
+      <geom name="base_link_visual" type="mesh" mesh="base_link_base_link" material="default_material" class="visual" />
+      <body name="hip_aa_left_side_bl_biped" pos="-0.066 -0.1182 0" quat="0 0.7071 0.7071 0">
+        <inertial pos="-0.0017924 0.028387 -0.021631" mass="0.093503" diaginertia="6.6139e-05 4.2159e-05 3.0749e-05" />
+        <geom name="hip_aa_left_side_bl_biped_collision" type="mesh" mesh="hip_aa_left_side_bl_biped_collision_hip_aa_left_side_bl_biped" class="collision" />
+        <geom name="hip_aa_left_side_bl_biped_visual" type="mesh" mesh="hip_aa_left_side_bl_biped_hip_aa_left_side_bl_biped" material="default_material" class="visual" />
+        <body name="hip_fe_left_side_bl_biped" pos="0.01 0 0" quat="0.4688 -0.5294 0.4688 -0.5294">
+          <inertial pos="-0.00264656198378056 -0.0117373327096065 0.0449336453716666" mass="0.0875377233211831" diaginertia="6.82008834854275e-05 4.5069453666998e-05 2.91118242506948e-05" />
+          <joint name="hip_fe_left_side_bl_biped_joint" type="hinge" axis="0 0 1" />
+          <geom name="hip_fe_left_side_bl_biped_collision" type="mesh" mesh="hip_fe_left_side_bl_biped_collision_hip_fe_left_side_bl_biped" class="collision" />
+          <geom name="hip_fe_left_side_bl_biped_visual" type="mesh" mesh="hip_fe_left_side_bl_biped_hip_fe_left_side_bl_biped" material="default_material" class="visual" />
+          <body name="upper_leg_left" pos="0 -0.04009 0.02445" quat="0.8941 -0.4479 0 0">
+            <inertial pos="0.0337049648914777 -2.07744355823769E-05 -0.109703593119716" mass="0.10377648641822" diaginertia="0.000268105400038996 0.000261762248291606 1.68226262641879e-05" />
+            <joint name="upper_leg_left_joint" type="hinge" axis="1 0 0" />
+            <geom name="upper_leg_left_collision" type="mesh" mesh="upper_leg_left_collision_upper_leg_left" class="collision" />
+            <geom name="upper_leg_left_visual" type="mesh" mesh="upper_leg_left_upper_leg_left" material="default_material" class="visual" />
+            <body name="lower_leg_left" pos="0.01997 0 -0.2" quat="0 0 -0.5587 -0.8294">
+              <inertial pos="-0.0385220333250463 -2.05346427539776E-06 -0.0881749362172527" mass="0.053970406394337" diaginertia="0.000210304316971374 0.000209791725136052 3.06150796682135e-06" />
+              <joint name="lower_leg_left_joint" type="hinge" axis="1 0 0" />
+              <geom name="lower_leg_left_collision" type="mesh" mesh="lower_leg_left_collision_lower_leg_left" class="collision" />
+              <geom name="lower_leg_left_visual" type="mesh" mesh="lower_leg_left_lower_leg_left" material="default_material" class="visual" />
+              <body name="foot_left" pos="-0.03943 0 -0.2" quat="0.866 0.5 0 0">
+                <inertial pos="5.99032361769947E-08 -0.00700427543915016 1.85583393930155E-08" mass="0.0165935434374477" diaginertia="8.21666243950823e-06 8.10382689201121e-06 5.50701454433249e-07" />
+                <joint name="foot_left_joint" type="hinge" axis="1 0 0" />
+                <geom name="foot_left_collision" type="mesh" mesh="foot_left_collision_foot_left" class="collision" />
+                <geom name="foot_left_visual" type="mesh" mesh="foot_left_foot_left" material="default_material" class="visual" />
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="hip_aa_right_side_bl_biped" pos="0.066 -0.1182 0" quat="0 0.7071 0.7071 0">
+        <inertial pos="-0.0017935 -0.028388 -0.021631" mass="0.093502" diaginertia="6.6138e-05 4.216e-05 3.0749e-05" />
+        <geom name="hip_aa_right_side_bl_biped_collision" type="mesh" mesh="hip_aa_right_side_bl_biped_collision_hip_aa_right_side_bl_biped" class="collision" />
+        <geom name="hip_aa_right_side_bl_biped_visual" type="mesh" mesh="hip_aa_right_side_bl_biped_hip_aa_right_side_bl_biped" material="default_material" class="visual" />
+        <body name="hip_fe_right_side_bl_biped" pos="0.01 0 0" quat="0.5216 -0.4774 -0.5216 0.4774">
+          <inertial pos="-0.00264759104456501 -0.0117375436090387 -0.0449332991893937" mass="0.0875393673311257" diaginertia="6.82030069011361e-05 4.50813094160471e-05 2.9123047290005e-05" />
+          <joint name="hip_fe_right_side_bl_biped_joint" type="hinge" axis="0 0 1" />
+          <geom name="hip_fe_right_side_bl_biped_collision" type="mesh" mesh="hip_fe_right_side_bl_biped_collision_hip_fe_right_side_bl_biped" class="collision" />
+          <geom name="hip_fe_right_side_bl_biped_visual" type="mesh" mesh="hip_fe_right_side_bl_biped_hip_fe_right_side_bl_biped" material="default_material" class="visual" />
+          <body name="upper_leg_right" pos="0 -0.04009 -0.02445" quat="0.4292 -0.9032 0 0">
+            <inertial pos="0.033705 -2.0751E-05 -0.1097" mass="0.10378" diaginertia="0.00026811 0.00026175 1.6808e-05" />
+            <joint name="upper_leg_right_joint" type="hinge" axis="1 0 0" />
+            <geom name="upper_leg_right_collision" type="mesh" mesh="upper_leg_right_collision_upper_leg_right" class="collision" />
+            <geom name="upper_leg_right_visual" type="mesh" mesh="upper_leg_right_upper_leg_right" material="default_material" class="visual" />
+            <body name="lower_leg_right" pos="0.044626 0 -0.2" quat="0 0 -0.5818 0.8133">
+              <inertial pos="-0.013866 -2.0394E-06 -0.088175" mass="0.05397" diaginertia="0.0002103 0.00020979 3.0615e-06" />
+              <joint name="lower_leg_right_joint" type="hinge" axis="1 0 0" />
+              <geom name="lower_leg_right_collision" type="mesh" mesh="lower_leg_right_collision_lower_leg_right" class="collision" />
+              <geom name="lower_leg_right_visual" type="mesh" mesh="lower_leg_right_lower_leg_right" material="default_material" class="visual" />
+              <body name="foot_right" pos="-0.014774 0 -0.2" quat="0 0 -0.5 -0.866">
+                <inertial pos="7.0722E-08 -0.0070043 -4.6886E-09" mass="0.016594" diaginertia="8.2167e-06 8.1038e-06 5.507e-07" />
+                <joint name="foot_right_joint" type="hinge" axis="1 0 0" />
+                <geom name="foot_right_collision" type="mesh" mesh="foot_right_collision_foot_right" class="collision" />
+                <geom name="foot_right_visual" type="mesh" mesh="foot_right_foot_right" material="default_material" class="visual" />
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <freejoint name="floating_base" />
+    </body>
+    <light pos="0 0 2." dir="0 0 -1" directional="true" />
+    <geom name="floor" class="floor" size="0 0 0.05" />
+  </worldbody>
+
+  <asset>
+    <material name="default_material" rgba="0.7 0.7 0.7 1" />
+    <mesh name="base_link_collision_base_link" file="meshes/practice_biped_robot/meshes/base_link.STL" />
+    <mesh name="base_link_base_link" file="meshes/practice_biped_robot/meshes/base_link.STL" />
+    <mesh name="hip_aa_left_side_bl_biped_collision_hip_aa_left_side_bl_biped" file="meshes/practice_biped_robot/meshes/hip_aa_left_side_bl_biped.STL" />
+    <mesh name="hip_aa_left_side_bl_biped_hip_aa_left_side_bl_biped" file="meshes/practice_biped_robot/meshes/hip_aa_left_side_bl_biped.STL" />
+    <mesh name="hip_fe_left_side_bl_biped_collision_hip_fe_left_side_bl_biped" file="meshes/practice_biped_robot/meshes/hip_fe_left_side_bl_biped.STL" />
+    <mesh name="hip_fe_left_side_bl_biped_hip_fe_left_side_bl_biped" file="meshes/practice_biped_robot/meshes/hip_fe_left_side_bl_biped.STL" />
+    <mesh name="upper_leg_left_collision_upper_leg_left" file="meshes/practice_biped_robot/meshes/upper_leg_left.STL" />
+    <mesh name="upper_leg_left_upper_leg_left" file="meshes/practice_biped_robot/meshes/upper_leg_left.STL" />
+    <mesh name="lower_leg_left_collision_lower_leg_left" file="meshes/practice_biped_robot/meshes/lower_leg_left.STL" />
+    <mesh name="lower_leg_left_lower_leg_left" file="meshes/practice_biped_robot/meshes/lower_leg_left.STL" />
+    <mesh name="foot_left_collision_foot_left" file="meshes/practice_biped_robot/meshes/foot_left.STL" />
+    <mesh name="foot_left_foot_left" file="meshes/practice_biped_robot/meshes/foot_left.STL" />
+    <mesh name="hip_aa_right_side_bl_biped_collision_hip_aa_right_side_bl_biped" file="meshes/practice_biped_robot/meshes/hip_aa_right_side_bl_biped.STL" />
+    <mesh name="hip_aa_right_side_bl_biped_hip_aa_right_side_bl_biped" file="meshes/practice_biped_robot/meshes/hip_aa_right_side_bl_biped.STL" />
+    <mesh name="hip_fe_right_side_bl_biped_collision_hip_fe_right_side_bl_biped" file="meshes/practice_biped_robot/meshes/hip_fe_right_side_bl_biped.STL" />
+    <mesh name="hip_fe_right_side_bl_biped_hip_fe_right_side_bl_biped" file="meshes/practice_biped_robot/meshes/hip_fe_right_side_bl_biped.STL" />
+    <mesh name="upper_leg_right_collision_upper_leg_right" file="meshes/practice_biped_robot/meshes/upper_leg_right.STL" />
+    <mesh name="upper_leg_right_upper_leg_right" file="meshes/practice_biped_robot/meshes/upper_leg_right.STL" />
+    <mesh name="lower_leg_right_collision_lower_leg_right" file="meshes/practice_biped_robot/meshes/lower_leg_right.STL" />
+    <mesh name="lower_leg_right_lower_leg_right" file="meshes/practice_biped_robot/meshes/lower_leg_right.STL" />
+    <mesh name="foot_right_collision_foot_right" file="meshes/practice_biped_robot/meshes/foot_right.STL" />
+    <mesh name="foot_right_foot_right" file="meshes/practice_biped_robot/meshes/foot_right.STL" />
+    <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8" width="300" height="300" />
+    <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2" />
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072" />
+  </asset>
+
+  <actuator>
+    <motor name="hip_fe_left_side_bl_biped_joint" joint="hip_fe_left_side_bl_biped_joint" />
+    <motor name="upper_leg_left_joint" joint="upper_leg_left_joint" />
+    <motor name="lower_leg_left_joint" joint="lower_leg_left_joint" />
+    <motor name="hip_fe_right_side_bl_biped_joint" joint="hip_fe_right_side_bl_biped_joint" />
+    <motor name="upper_leg_right_joint" joint="upper_leg_right_joint" />
+    <motor name="lower_leg_right_joint" joint="lower_leg_right_joint" />
+  </actuator>
+
+  <visual>
+    <rgba haze="0.15 0.25 0.35 1" />
+  </visual>
+
+</mujoco>
